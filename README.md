@@ -1,9 +1,9 @@
 # Zeebe.io - Microservice Orchestration Engine
 
-
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/io.zeebe/zeebe-distribution/badge.svg)](https://maven-badges.herokuapp.com/maven-central/io.zeebe/zeebe-distribution)
 
-Zeebe scales orchestration of workers and microservices using visual workflows. Zeebe is horizontally scalable and fault tolerant so that you can reliably process all your transactions as they happen.
+Zeebe scales orchestration of workers and microservices using visual workflows. Zeebe is horizontally scalable and fault
+tolerant so that you can reliably process all your transactions as they happen.
 
 **Features**
 
@@ -52,7 +52,5 @@ code-of-conduct@zeebe.io.
 ## License
 
 Most Zeebe source files are made available under the [Apache License, Version
-2.0](/APACHE-2.0) except for the [broker-core](/broker-core) component. The
-[broker-core](/broker-core) source files are made available under the terms of
-the [GNU Affero General Public License (GNU AGPLv3)](/GNU-AGPL-3.0). See
+2.0](/APACHE-2.0). See
 individual source files for details.

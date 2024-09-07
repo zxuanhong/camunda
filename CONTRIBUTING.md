@@ -6,13 +6,16 @@ Zeebe is developed as multi module maven project. To build all components
 run the command `mvn clean install -DskipTests` in the root folder.
 
 The resulting Zeebe distribution can be found in the folder `dist/target`, i.e.
+
 ```
 dist/target/zeebe-distribution-X.Y.Z-SNAPSHOT.tar.gz
 dist/target/zeebe-distribution-X.Y.Z-SNAPSHOT.zip
 ```
 
 This is a small overview of the contents of the different modules:
-- `util` contains custom implementations of building blocks like an actor scheduler, buffer allocations, metrics. Its parts are used in most of the other modules
+
+- `util` contains custom implementations of building blocks like an actor scheduler, buffer allocations, metrics. Its
+  parts are used in most of the other modules
 - `protocol` contains the SBE definition of the main message protocol
 - `bpmn-model` is a Java API for BPMN process definitions used for parsing etc.
 - `msgpack-*` is custom msgpack implementation with extensions to evaluate json-path expressions on msgpack objects
@@ -68,7 +71,8 @@ If you want to work on an issue please follow the following steps:
    ```
    git checkout -b 123-adding-bpel-support`
    ```
-1. Follow the [Google Java Format](https://github.com/google/google-java-format#intellij-android-studio-and-other-jetbrains-ides)
+1. Follow
+   the [Google Java Format](https://github.com/google/google-java-format#intellij-android-studio-and-other-jetbrains-ides)
    and [Google Java Style](https://github.com/google/styleguide) while coding.
 1. Implement the required changes on your branch and regularly push your
    changes to the origin so that the CI can run on it. Git commit will run a
@@ -122,6 +126,7 @@ If you want to work on an issue please follow the following steps:
 
 Every issue should have a meaningful name and a description which either
 describes:
+
 - a new feature with details about the use case the feature would solve or
   improve
 - a problem, how we can reproduce it and what would be the expected behavior
@@ -130,36 +135,37 @@ describes:
 ### Labels
 
 Every issue will have up to three types of labels to indicate its status, type
-  and scope. The status label will be normally managed by https://waffle.io/zeebe-io/zeebe.
+and scope. The status label will be normally managed by https://waffle.io/zeebe-io/zeebe.
 
 - [[:mag:]][status] Status:
-  - No status label means it is not planned to work on the issue in the
-    near future
-  - [[:mag:]][planned] **Planned**: We plan to work on the issue in the current quarter
-  - [[:mag:]][ready] **Ready**: We plan to work on the issue in the next weeks
-  - [[:mag:]][in progress] **In Progress**: Someone is currently actively working on the issue
-  - [[:mag:]][needs review] **Needs Review**: The initial work on the issue is finished and it is now
-    subject to the review process
+    - No status label means it is not planned to work on the issue in the
+      near future
+    - [[:mag:]][planned] **Planned**: We plan to work on the issue in the current quarter
+    - [[:mag:]][ready] **Ready**: We plan to work on the issue in the next weeks
+    - [[:mag:]][in progress] **In Progress**: Someone is currently actively working on the issue
+    - [[:mag:]][needs review] **Needs Review**: The initial work on the issue is finished and it is now
+      subject to the review process
 - [[:mag:]][type] Type:
-  - [[:mag:]][enhancement] **Enhancement**: A user facing feature or improvement, decided if this
-  - [[:mag:]][bug] **Bug**: A user facing bug fix, which will be listed in the changelog
-    issue is something with should be listed in the changelog
-  - [[:mag:]][maintenance] **Maintenance**: A non-user facing code change
-  - [[:mag:]][docs] **Docs**: A addition or change to the docs
-  - [[:mag:]][question] **Question**: A general question which not yet is an actionable issue
+    - [[:mag:]][enhancement] **Enhancement**: A user facing feature or improvement, decided if this
+    - [[:mag:]][bug] **Bug**: A user facing bug fix, which will be listed in the changelog
+      issue is something with should be listed in the changelog
+    - [[:mag:]][maintenance] **Maintenance**: A non-user facing code change
+    - [[:mag:]][docs] **Docs**: A addition or change to the docs
+    - [[:mag:]][question] **Question**: A general question which not yet is an actionable issue
 - [[:mag:]][scope] Scope:
-  - No scope label means it is not directly related to a code change in either
-    the broker or client
-  - [[:mag:]][broker] **broker**: Issues related to code changes which involve the server part
-    of the architecture, including gateway and exporters
-  - [[:mag:]][clients/java] **clients/java**: Issues related to code changes which involve the java
-    client
-  - [[:mag:]][clients/go] **clients/go**: Issues related to code changes which involve the go
-    client and zbctl
+    - No scope label means it is not directly related to a code change in either
+      the broker or client
+    - [[:mag:]][broker] **broker**: Issues related to code changes which involve the server part
+      of the architecture, including gateway and exporters
+    - [[:mag:]][clients/java] **clients/java**: Issues related to code changes which involve the java
+      client
+    - [[:mag:]][clients/go] **clients/go**: Issues related to code changes which involve the go
+      client and zbctl
 
 ## Commit Message Guidelines
 
 The commit message should match the following pattern
+
 ```
 %{type}(%{scope}): %{description}
 ```
@@ -184,9 +190,7 @@ submitted. Please make sure to address any hints from the bot.
 ## License
 
 Most Zeebe source files are made available under the [Apache License, Version
-2.0](/APACHE-2.0) except for the [broker-core](/broker-core) component. The
-[broker-core](/broker-core) source files are made available under the terms of
-the [GNU Affero General Public License (GNU AGPLv3)](/GNU-AGPL-3.0). See
+2.0](/APACHE-2.0). See
 individual source files for details.
 
 If you would like to contribute something, or simply want to hack on the code
@@ -200,24 +204,39 @@ this code. Please report unacceptable behavior to
 code-of-conduct@zeebe.io.
 
 [issues]: https://github.com/zeebe-io/zeebe/issues
+
 [forum]: https://forum.zeebe.io/
+
 [slack]: https://zeebe-slack-invite.herokuapp.com/
+
 [sample]: https://github.com/zeebe-io/zeebe-test-template-java
 
 [status]: https://github.com/zeebe-io/zeebe/labels?q=Type
+
 [planned]: https://github.com/zeebe-io/zeebe/labels/Type%3A%20Enhancement
+
 [ready]: https://github.com/zeebe-io/zeebe/labels/Type%3A%20Maintenance
+
 [in progress]: https://github.com/zeebe-io/zeebe/labels/Type%3A%20Bug
+
 [needs review]: https://github.com/zeebe-io/zeebe/labels/Type%3A%20Docs
 
 [type]: https://github.com/zeebe-io/zeebe/labels?q=Type
+
 [enhancement]: https://github.com/zeebe-io/zeebe/labels/Type%3A%20Enhancement
+
 [maintenance]: https://github.com/zeebe-io/zeebe/labels/Type%3A%20Maintenance
+
 [bug]: https://github.com/zeebe-io/zeebe/labels/Type%3A%20Bug
+
 [docs]: https://github.com/zeebe-io/zeebe/labels/Type%3A%20Docs
+
 [question]: https://github.com/zeebe-io/zeebe/labels/Type%3A%20Question
 
 [scope]: https://github.com/zeebe-io/zeebe/labels?q=Scope
+
 [broker]: https://github.com/zeebe-io/zeebe/labels/Scope%3A%20broker
+
 [clients/java]: https://github.com/zeebe-io/zeebe/labels/Scope%3A%20clients%2Fjava
+
 [clients/go]: https://github.com/zeebe-io/zeebe/labels/Scope%3A%20clients%2Fgo
